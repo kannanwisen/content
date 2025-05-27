@@ -119,7 +119,12 @@ This property can take one of four different forms:
     - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.
     - In flexbox layouts, this keyword has no meaning as this property is _ignored._
-    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic size where it behaves like `start`.
+    - In grid layouts, this keyword leads to a behavior similar to the one of `stretch`, except for boxes with an aspect ratio or an intrinsic size where it behaves like `start`. The contextual factors that affect the normal as a stretch are:
+    -- The writing-mode of the grid container
+    -- The direction property of the grid container
+    -- The item's own justify-self or align-self property
+    -- The intrinsic sizing and aspect ratio of the item
+    -- min-width / max-width / min-height / max-height properties on the grid item
 - `start`
   - : The item is packed flush to each other toward the start edge of the alignment container in the appropriate axis.
 - `end`
