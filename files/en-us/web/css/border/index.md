@@ -63,13 +63,13 @@ This property is a shorthand for the following CSS properties:
 /* style */
 border: solid;
 
-/* width | style */
+/* width && style */
 border: 2px dotted;
 
-/* style | color */
+/* style && color */
 border: outset #f33;
 
-/* width | style | color */
+/* width && style && color */
 border: medium dashed green;
 
 /* Global values */
